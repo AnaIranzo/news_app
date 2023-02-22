@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 class Card extends Component {
-
+/* 
   constructor(props){
     super(props)
-  }
+  } */
   render() {
     return <>
     
-   
+    
     
       <a href={this.props.data.url}><h2>{this.props.data.title}</h2></a>
       <p>{this.props.data.abstract}</p>
