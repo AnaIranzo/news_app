@@ -58,9 +58,9 @@ componentDidUpdate(prevProps, prevState) {
   console.log("++STATE++");
   console.log(this.state);
 
-  /* if (prevState !== this.state.newsData) {
+   if (prevProps !== this.props) {
     this.getNewsForm();
-  } */
+  } 
   
 } 
 
