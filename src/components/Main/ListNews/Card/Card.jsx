@@ -8,14 +8,15 @@ class Card extends Component {
   render() {
     return <>
     
-    {this.props.data.map(news => <>
+   
     
-      <a href={news.url}><h2>{news.title}</h2></a>
-      <p>{news.abstract}</p>
-      <p>{news.byline}</p>
-      <p>{news.published_date}</p>
+      <a href={this.props.data.url}><h2>{this.props.data.title}</h2></a>
+      <p>{this.props.data.abstract}</p>
+      <p>{this.props.data.byline}</p>
+      <p>{this.props.data.published_date}</p>
+      <button onClick={this.props.remove}>Delete</button>
     
-    </>)}
+    
     
     
     </>;
