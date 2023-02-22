@@ -24,6 +24,10 @@ getNews = async () => {
   console.log(news);
 
 }
+getNewsForm = () => {
+  
+  this.setState({newsData:[...this.state.newsData, this.props.data]})
+}
 
 printNews = () => {
   return <>
@@ -38,11 +42,25 @@ deleteNew = (i) => {
 }
 
 
+
 componentDidMount() { 
   this.getNews();
 }
 
 componentDidUpdate(prevProps, prevState) { 
+  console.log("****DATOS DEL PASADO****");
+  console.log('prevProps: ', prevProps, 'prevState: ', prevState)
+  
+  console.log("****DATOS DEL PRESENTE****");
+  console.log("++PROPS++");
+  console.log(this.props);
+  
+  console.log("++STATE++");
+  console.log(this.state);
+
+  /* if (prevState !== this.state.newsData) {
+    this.getNewsForm();
+  } */
   
 } 
 
@@ -50,7 +68,7 @@ componentDidUpdate(prevProps, prevState) {
 
 
   render() {
-    
+    console.log(this.props.data.title);
     return <section>
 
     {this.printNews()}
