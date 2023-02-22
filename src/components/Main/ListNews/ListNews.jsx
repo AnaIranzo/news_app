@@ -25,14 +25,26 @@ getNews = async () => {
 
 }
 
+printNews = () => {
+  return <>
+  {this.state.newsData.map((news,i) =>  
+  <Card data={news} remove={() => this.deleteNew(i)}  key={uuidv4()}/>)}
+  </>
+}
+
+deleteNew = (i) => {
+  const remainingNews = this.state.newsData.filter((news,j)=> j!==i);
+  this.setState({newsData:remainingNews})
+}
+
 
 componentDidMount() { 
   this.getNews();
- }
+}
 
- componentDidUpdate(prevProps, prevState) { 
+componentDidUpdate(prevProps, prevState) { 
   
- } 
+} 
 
 
 
@@ -41,7 +53,7 @@ componentDidMount() {
     
     return <section>
 
-    <Card data={this.state.newsData} key={uuidv4()}/>
+    {this.printNews()}
 
     </section>;
   }
