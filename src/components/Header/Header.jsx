@@ -3,11 +3,11 @@ import Nav from './Nav/Nav'
 
 class Header extends Component {
   render() {
-    return <>
+    return <header>
     
     <Nav/>
     
-    </>;
+    </header>;
   }
 }
 

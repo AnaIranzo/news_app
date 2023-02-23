@@ -4,6 +4,9 @@ import Home from './Home/Home';
 import Form from './Form/Form';
 import ListNews from "./ListNews/ListNews";
 
+
+//https://api.nytimes.com/svc/topstories/v2/Health.json?api-key={process.env.REACT_APP_API_KEY_NEWS}
+
 class Main extends Component {
   constructor(props){
     super(props)

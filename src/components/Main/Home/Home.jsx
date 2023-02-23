@@ -31,15 +31,12 @@ class Home extends Component {
   }
 
   render() {
-    return <div>
-    
-
-      <div>
+    return <div className="container-log">
           <h1>Log in</h1>
           <input type="text" ref={this.username} onChange={this.handleChange} placeholder="Name" />
           {this.state.username ? <button variant="contained" onClick={this.sendName}>Login</button> : ""}
-        </div>
-    </div>;
+        
+          </div>;
   }
 }
 
