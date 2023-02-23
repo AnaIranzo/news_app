@@ -5,12 +5,7 @@ import Card from './Card/Card';
 //https://api.nytimes.com/svc/topstories/v2/Health.json?api-key={process.env.REACT_APP_API_KEY_NEWS}
 
 class ListNews extends Component {
-   constructor(props) {
-    super(props);
-    this.state = {
-      newsData : this.props.data
-    } 
-} 
+  
 
 
 /* getNewsForm = () => {
@@ -19,17 +14,14 @@ class ListNews extends Component {
 } */
 
 printNews = () => {
-  console.log(this.state.newsData);
+  console.log(this.props.data);
   return <>
-  {this.state.newsData.map((news,i) =>  
-  <Card data={news} remove={() => this.deleteNew(i)}  key={uuidv4()}/>)}
+  {this.props.data.map((news,i) =>  
+  <Card data={news} remove={() => this.props.delete(i)}  key={uuidv4()}/>)}
   </>
 }
 
-deleteNew = (i) => {
-  const remainingNews = this.state.newsData.filter((news,j)=> j!==i);
-  this.setState({newsData:remainingNews})
-}
+
 
 
 
@@ -37,7 +29,6 @@ deleteNew = (i) => {
 
   render() {
     console.log(this.props.data);
-    console.log(this.state.newsData);
 
 
     return <section>
