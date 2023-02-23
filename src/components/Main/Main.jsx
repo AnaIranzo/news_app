@@ -16,9 +16,7 @@ class Main extends Component {
   }
 
   handleFormData = (formNews) => {
-    console.log(formNews);
-    //alert('enviado'+ formNews.title) 
-    //this.setState({...this.state, formNew: {title, abstract, url, author, date}})
+
     this.setState({newsData:[...this.state.newsData, formNews]})
   }
 
@@ -35,7 +33,10 @@ class Main extends Component {
   }
 
 
-
+  deleteNews = (i) => {
+    const remainingNews = this.state.newsData.filter((news,j)=> j!==i);
+    this.setState({newsData:remainingNews})
+  }
 
   componentDidMount() { 
     this.getNews();
@@ -53,7 +54,7 @@ class Main extends Component {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/form" element={<Form onSubmitForm={this.handleFormData}/>}/>
-        <Route path="/list" element={<ListNews data={this.state.newsData}/>}/>
+        <Route path="/list" element={<ListNews data={this.state.newsData} delete={this.deleteNews}/>}/>
       </Routes>
     </main>;
   }
