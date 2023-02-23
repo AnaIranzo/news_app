@@ -42,7 +42,7 @@ class Form extends Component {
   render() {
     return <>
     
-    <form onSubmit={this.handleSubmit}>
+    <form onSubmit={this.handleSubmit} className='container-form'>
           <label htmlFor="title">Title:</label>
           <input type="text" id="title" name="title"/>
           <label htmlFor="abstract">Abstract:</label>
