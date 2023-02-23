@@ -5,33 +5,23 @@ import Card from './Card/Card';
 //https://api.nytimes.com/svc/topstories/v2/Health.json?api-key={process.env.REACT_APP_API_KEY_NEWS}
 
 class ListNews extends Component {
-  constructor(props) {
+   constructor(props) {
     super(props);
     this.state = {
-      newsData : []
-    }
-}
+      newsData : this.props.data
+    } 
+} 
 
-getNews = async () => {
-  const topic = 'Health';
-  const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/${topic}.json?api-key=${process.env.REACT_APP_API_KEY_NEWS}`);
-  const data = await response.json();
 
-  const dataResults = data.results;
-  const news = dataResults.slice(1,6);//quito la primera porque trae datos de admin o plantilla
-
-  this.setState({newsData: news})
-  console.log(news);
-
-}
-getNewsForm = () => {
-  
+/* getNewsForm = () => {
+  console.log(this.props.data);
   this.setState({newsData:[...this.state.newsData, this.props.data]})
-}
+} */
 
 printNews = () => {
+  console.log(this.props.data);
   return <>
-  {this.state.newsData.map((news,i) =>  
+  {this.props.data.map((news,i) =>  
   <Card data={news} remove={() => this.deleteNew(i)}  key={uuidv4()}/>)}
   </>
 }
@@ -41,37 +31,13 @@ deleteNew = (i) => {
   this.setState({newsData:remainingNews})
 }
 
-
-
-componentDidMount() { 
-  this.getNews();
-}
-
-componentDidUpdate(prevProps, prevState) { 
-  console.log("****DATOS DEL PASADO****");
-  console.log('prevProps: ', prevProps, 'prevState: ', prevState)
-  
-  console.log("****DATOS DEL PRESENTE****");
-  console.log("++PROPS++");
-  console.log(this.props);
-  
-  console.log("++STATE++");
-  console.log(this.state);
-
-   if (prevProps !== this.props) {
-    this.getNewsForm();
-  } 
-  
-} 
-
-
-
-
   render() {
     console.log(this.props.data.title);
+   
     return <section>
 
     {this.printNews()}
+    
 
     </section>;
   }
