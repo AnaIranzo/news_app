@@ -10,7 +10,7 @@ class Nav extends Component {
     <Link to='/form'>Form</Link>
     <Link to='/list'>List</Link>
 
-    <userContext.Consumer>{/* consumo directamente sobre jsx --> clases */}
+    <userContext.Consumer>
         {({ logout, user }) => user ?
           <span>Welcome, {user} <button variant="contained" size="small" onClick={logout}>Logout</button></span>
           : ""

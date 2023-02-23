@@ -1,6 +1,14 @@
 import React, { Component } from "react";
+import { Navigate } from "react-router-dom"
 
 class Form extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = {
+      button: false
+    }
+  }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +34,7 @@ class Form extends Component {
     e.target.date.value = ''
     
     this.props.onSubmitForm(formNews)
+    
   }
 
 
@@ -44,9 +53,10 @@ class Form extends Component {
           <input type="url" id="url" name="url" />
           <label htmlFor="date">Published date:</label>
           <input type="text" id="date" name="date" />
-          <input type="submit" value="Add" />
+          <input type="submit" value="Add" onClick={()=>this.setState({button:true})}/>
         </form> 
     
+    {this.state.button?<Navigate to='/list'/>:''}
     </>;
   }
 }
