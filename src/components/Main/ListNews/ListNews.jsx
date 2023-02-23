@@ -19,9 +19,9 @@ class ListNews extends Component {
 } */
 
 printNews = () => {
-  console.log(this.props.data);
+  console.log(this.state.newsData);
   return <>
-  {this.props.data.map((news,i) =>  
+  {this.state.newsData.map((news,i) =>  
   <Card data={news} remove={() => this.deleteNew(i)}  key={uuidv4()}/>)}
   </>
 }
@@ -31,9 +31,15 @@ deleteNew = (i) => {
   this.setState({newsData:remainingNews})
 }
 
+
+
+
+
   render() {
-    console.log(this.props.data.title);
-   
+    console.log(this.props.data);
+    console.log(this.state.newsData);
+
+
     return <section>
 
     {this.printNews()}

@@ -3,13 +3,29 @@ import React, { Component } from "react";
 class Form extends Component {
 
   handleSubmit = (e) => {
-    this.props.onSubmitForm(e)
+    e.preventDefault();
+
+    const title = e.target.title.value;
+    const abstract = e.target.abstract.value;
+    const url = e.target.url.value;
+    const author = e.target.author.value;
+    const date = e.target.date.value;
+
+    const formNews = {
+      title,
+      abstract,
+      url,
+      author,
+      date
+    }
     
     e.target.title.value = ''
     e.target.abstract.value = ''
     e.target.author.value = ''
     e.target.url.value = ''
     e.target.date.value = ''
+    
+    this.props.onSubmitForm(formNews)
   }
 
 
