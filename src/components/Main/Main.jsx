@@ -15,25 +15,11 @@ class Main extends Component {
     }
   }
 
-  handleForm = (e) => {
-    e.preventDefault();
-    /* alert('enviado'+ e.target.title.value) */
-    const title = e.target.title.value;
-    const abstract = e.target.abstract.value;
-    const url = e.target.url.value;
-    const author = e.target.author.value;
-    const date = e.target.date.value;
-
-    const formNew = {
-      title,
-      abstract,
-      url,
-      author,
-      date
-    }
-
+  handleFormData = (formNews) => {
+    console.log(formNews);
+    //alert('enviado'+ formNews.title) 
     //this.setState({...this.state, formNew: {title, abstract, url, author, date}})
-    this.setState({newsData:[...this.state.newsData, formNew]})
+    this.setState({newsData:[...this.state.newsData, formNews]})
   }
 
   getNews = async () => {
@@ -44,8 +30,7 @@ class Main extends Component {
     const dataResults = data.results;
     const news = dataResults.slice(1,6);//quito la primera porque trae datos de admin o plantilla
   
-    this.setState({newsData: news})
-    console.log(news);
+    this.setState({newsData: news});
   
   }
 
@@ -56,26 +41,18 @@ class Main extends Component {
     this.getNews();
     
   }
-  
+
   componentDidUpdate(prevProps, prevState) { 
-    console.log("****DATOS DEL PASADO****");
-    console.log('prevProps: ', prevProps, 'prevState: ', prevState)
-    
-    console.log("****DATOS DEL PRESENTE****");
-    console.log("++PROPS++");
-   //
-    
-    console.log("++STATE++");
-    console.log(this.state);
-  
-    
+
   } 
 
+  
+  
   render() {
     return <main>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/form" element={<Form onSubmitForm={this.handleForm}/>}/>
+        <Route path="/form" element={<Form onSubmitForm={this.handleFormData}/>}/>
         <Route path="/list" element={<ListNews data={this.state.newsData}/>}/>
       </Routes>
     </main>;
