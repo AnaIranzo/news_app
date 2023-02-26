@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navigate } from "react-router-dom"
+import { Navigate } from "react-router-dom";
 
 import TextField from '@mui/material/TextField';
 
@@ -43,19 +43,19 @@ class Form extends Component {
 
   render() {
     return <>
-    
+      <h2>Publish your news</h2>
       <form onSubmit={this.handleSubmit} className='container-form'>
         
-          <TextField type="text" id="title" name="title" label="Name" />
+          <TextField type="text" id="title" name="title" label="Name" required/>
           
           <TextField type="text" id="abstract" name="abstract" label="Abstract" />
           
-          <TextField type="text" id="author" name="author" label="Author" />
+          <TextField type="text" id="author" name="author" label="Author" required/>
 
-          <TextField type="url" id="url" name="url" label="Url" />
+          <TextField type="url" id="url" name="url" label="Url" required/>
           
           <TextField type="text" id="date" name="date" label="Published date" />
-          <input type="submit" value="Add" onClick={()=>this.setState({button:true})}/>
+          <input type="submit" value="Add" onClick={()=>this.setState({button:true})} id='add-btn'/>
         </form>  
     
     
