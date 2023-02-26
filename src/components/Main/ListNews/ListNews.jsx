@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import Card from './Card/Card';
+import Cards from './Cards/Cards';
 
 
 class ListNews extends Component {
@@ -9,18 +9,22 @@ class ListNews extends Component {
 printNews = () => {
 
   return <>
+  
   {this.props.data.map((news,i) =>  
-  <Card data={news} remove={() => this.props.delete(i)}  key={uuidv4()} />)}
+  <Cards data={news} remove={() => this.props.delete(i)}  key={uuidv4()} />)}
   </>
 }
 
   render() {
-    return <section className="container-news">
+    return <>
+    <h2>NYT News</h2>
+    <section className="container-news">
 
     {this.printNews()}
     
 
     </section>;
+    </>
   }
 }
 

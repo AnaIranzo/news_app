@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { userContext } from "../../../context/userContext";
+import Button from '@mui/material/Button';
+
 
 class Home extends Component {
 
@@ -32,11 +34,17 @@ class Home extends Component {
 
   render() {
     return <div className="container-log">
-          <h1>Log in</h1>
-          <input type="text" ref={this.username} onChange={this.handleChange} placeholder="Name" />
-          {this.state.username ? <button variant="contained" onClick={this.sendName}>Login</button> : ""}
-        
-          </div>;
+    <h2>Log in</h2>
+    <input type="text" ref={this.username} onChange={this.handleChange} placeholder="Name" />
+    {this.state.username ? <Button variant="contained" onClick={this.sendName}>Login</Button> : ""}
+  
+    </div>; 
+    
+    
+    
+    
+
+
   }
 }
 
