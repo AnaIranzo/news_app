@@ -1,3 +1,17 @@
+# NYT News App
+Build using [Top Stories Api] (https://developer.nytimes.com/docs/top-stories-product/1/overview)
+
+You can see the first three health news in the list section. soon we will change it for a topic selector.
+
+And in the form section you can create a new news item
+
+### `npm install`
+
+# Environment variables.
+REACT_APP_API_KEY_NEWS=*
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
