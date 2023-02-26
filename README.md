@@ -1,5 +1,5 @@
 # NYT News App
-Build using [Top Stories Api](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+Built using [Top Stories Api](https://developer.nytimes.com/docs/top-stories-product/1/overview)
 
 You can see the first three health news in the list section. soon we will change it for a topic selector.
 
