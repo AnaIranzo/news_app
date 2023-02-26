@@ -1,5 +1,11 @@
 
-a{
+button > a{
     text-decoration: none;
     color: white
+}
+
+span{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }

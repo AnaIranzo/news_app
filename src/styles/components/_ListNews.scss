@@ -1,3 +1,22 @@
 .container-news{
     padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+@media screen and (min-width: 768px){
+    .container-news{
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        
+    }
 }

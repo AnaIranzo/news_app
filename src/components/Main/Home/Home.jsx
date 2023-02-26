@@ -34,7 +34,7 @@ class Home extends Component {
 
   render() {
     return <div className="container-log">
-    <h1>Log in</h1>
+    <h2>Log in</h2>
     <input type="text" ref={this.username} onChange={this.handleChange} placeholder="Name" />
     {this.state.username ? <Button variant="contained" onClick={this.sendName}>Login</Button> : ""}
   

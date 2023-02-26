@@ -1,3 +1,15 @@
-article a{
+#link_news{
     color: #003559;
+}
+
+.card-container{
+    min-width: 345px;
+   
+}
+
+@media screen and (min-width: 768px){
+    .card-container{
+        width: 800px;
+        
+    }
 }
