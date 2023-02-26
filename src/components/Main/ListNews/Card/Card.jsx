@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Button from '@mui/material/Button';
 
 class Card extends Component {
 
@@ -8,7 +9,7 @@ class Card extends Component {
       <p>{this.props.data.abstract}</p>
       <p>{this.props.data.byline}</p>
       <p>{this.props.data.published_date}</p>
-      <button onClick={this.props.remove}>Delete</button>
+      <Button onClick={this.props.remove} >Delete</Button>
     </article>;
   }
 }
