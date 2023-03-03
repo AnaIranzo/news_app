@@ -7,6 +7,7 @@ import Main from './components/Main';
 import { BrowserRouter } from 'react-router-dom';
 import { userContext } from "./context/userContext";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 const theme = createTheme({
   palette: {
     primary: {
