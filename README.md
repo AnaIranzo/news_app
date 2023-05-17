@@ -20,8 +20,8 @@ And in the form section you can create a new item.
 
 ### `npm install`
 
-# Environment variables.
-REACT_APP_API_KEY_NEWS=*
+## Environment variables
+REACT_APP_API_KEY_NEWS=***
 
 [Take a look!](https://main--symphonious-bublanina-46d5cb.netlify.app/)
 
