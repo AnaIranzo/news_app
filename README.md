@@ -7,11 +7,11 @@ And in the form section you can create a new item.
 
 ## Technologies
 
--JavaScript
--React Class Components
--Sass
--Context
--Mobile-first
+- JavaScript
+- React Class Components
+- Sass
+- Context
+- Mobile-first
 
 ## Routing
 - `/home`. Home
