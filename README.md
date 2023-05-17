@@ -3,14 +3,27 @@ Built using [Top Stories Api](https://developer.nytimes.com/docs/top-stories-pro
 
 You can see the first five health news in the list section. soon we will change it for a topic selector.
 
-And in the form section you can create a new news item
+And in the form section you can create a new item.
+
+## Technologies
+
+-JavaScript
+-React Class Components
+-Sass
+-Context
+-Mobile-first
+
+## Routing
+- `/home`. Home
+- `/form`. Form
+- `/list`. List
 
 ### `npm install`
 
 # Environment variables.
 REACT_APP_API_KEY_NEWS=*
 
-
+[Take a look!](https://main--symphonious-bublanina-46d5cb.netlify.app/)
 
 # Getting Started with Create React App
 
