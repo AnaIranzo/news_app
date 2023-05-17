@@ -18,10 +18,14 @@ And in the form section you can create a new item.
 - `/form`. Form
 - `/list`. List
 
-### `npm install`
 
 ## Environment variables
 REACT_APP_API_KEY_NEWS=***
+
+
+### `npm install`
+
+### `npm start`
 
 [Take a look!](https://main--symphonious-bublanina-46d5cb.netlify.app/)
 
