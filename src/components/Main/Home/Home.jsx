@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { userContext } from "../../../context/userContext";
 import Button from '@mui/material/Button';
+import img from '../../../assets/pexels-viktoria-alipatova-2325307.jpg';
 
 
 class Home extends Component {
@@ -37,7 +38,7 @@ class Home extends Component {
     <h2>Log in</h2>
     <input type="text" ref={this.username} onChange={this.handleChange} placeholder="Name" />
     {this.state.username ? <Button variant="contained" onClick={this.sendName}>Login</Button> : ""}
-  
+    <img src={img} alt="" />
     </div>; 
     
     
